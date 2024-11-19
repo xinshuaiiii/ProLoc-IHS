@@ -6,7 +6,7 @@ from torch.utils.data import Dataset, DataLoader
 import pandas as pd
 import numpy as np
 from tqdm import tqdm
-from model1 import CrossAttentionModel
+from model import CrossAttentionModel
 
 class FocalLoss(nn.Module):
     def __init__(self, alpha=1, gamma=2, reduction='mean'):
@@ -17,7 +17,7 @@ class FocalLoss(nn.Module):
 
     def forward(self, inputs, targets):
         BCE_loss = nn.functional.binary_cross_entropy_with_logits(inputs, targets, reduction='none')
-        pt = torch.exp(-BCE_loss)  # pt 是目标类别的概率
+        pt = torch.exp(-BCE_loss)  
         F_loss = self.alpha * (1 - pt) ** self.gamma * BCE_loss
 
         if self.reduction == 'mean':
@@ -29,7 +29,7 @@ class FocalLoss(nn.Module):
 
 # 多任务损失函数：主任务使用 BCE，次任务使用 Focal 和 BCE 的结合
 def multi_task_loss(outputs, labels, focal_weight=4, bce_weight=4, main_loss_weight=3, secondary_loss_weight=10):
-    # 主任务：BCEWithLogitsLoss 对所有标签，使用 pos_weight 来处理类别不平衡
+    # 主任务：BCEWithLogitsLoss 对所有标签
     main_loss = nn.functional.binary_cross_entropy_with_logits(outputs, labels)
 
     # 次任务：专门针对第5个标签（索引为4），结合 Focal Loss 和 BCEWithLogitsLoss
@@ -82,7 +82,6 @@ if __name__ == '__main__':
     attention_masks = attention_masks[:num_samples]
     img_features = img_features[:num_samples]
 
-    # 计算 pos_weight 用于类别不平衡处理
     pos_weight = torch.tensor(np.sum(labels.numpy() == 0, axis=0) / np.sum(labels.numpy() == 1, axis=0), dtype=torch.float32).to(device)
     print(f"类别不平衡权重：{pos_weight}")
 
