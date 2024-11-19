@@ -74,5 +74,5 @@ else:
 print(f"\n成功下载的图片数量: {len(successful_downloads)}")
 
 download_df = pd.DataFrame(download_records, columns=['File Name', 'locations', 'URL'])
-download_df.to_csv('../GmPLoc/all_data1.csv', index=False)
+download_df.to_csv('test_download.csv', index=False)
 print("下载记录已保存到 'download_records.csv'")
