@@ -167,7 +167,7 @@ if __name__ == '__main__':
 
     # 如果有测试集标签，可以加载标签数据
     try:
-        label_df = pd.read_csv("test_name_URL.csv")
+        label_df = pd.read_csv("dataset/test.csv")
         label_columns = [2, 3, 4, 5, 6]  # 对应的标签列
         labels = label_df.iloc[:, label_columns].values
         labels = torch.tensor(labels, dtype=torch.float32)
