@@ -28,7 +28,7 @@ def download_image(protein_id, image_url, HPA,location, output_dir):
 data = pd.read_csv('test_img_URL.csv')
 
 # 创建保存图像的主目录
-output_dir = '../test_img'
+output_dir = '../test'
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
