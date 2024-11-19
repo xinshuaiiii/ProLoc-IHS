@@ -3,11 +3,13 @@
 ##Requirements
 First create a virtual environment
 
-'''
+
 `conda create -n ProLoc-IHS python3.10
+
 conda activate ProLoc-IHS
+
 pip install -r requirements.txt`
-'''
+
 
 
 ##Dataset
