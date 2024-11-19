@@ -71,7 +71,7 @@ if __name__ == '__main__':
     print("加载图像特征")
     img_features = np.load("vitembeddings.npy")
 
-    label_df = pd.read_csv("train.csv")
+    label_df = pd.read_csv("dataset/train.csv")
     label_columns = [2, 3, 4, 5, 6]
     labels = label_df.iloc[:, label_columns].values
     labels = torch.tensor(labels, dtype=torch.float32)
