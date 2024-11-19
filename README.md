@@ -11,3 +11,18 @@ pip install -r requirements.txt
 
 # Dataset
 In the _dataset_ folder, there are four csv files, where _train/test.csv_ is the training set and test set information, including labels, sequences and other information, and _train/test_img_URL.csv_ contains the URL address of the image information. You need to use `python download.py `to download the IHC image.
+
+# Feature extraction
+We use a pre-trained language model to extract features. You need to download the ProtT5([[website]](https://github.com/agemagician/ProtTrans)) and Vit(download it from Huggingface) models to your local computer.And Then run
+```
+python feature extraction.py
+```
+# Train and test
+After preparing the features and training files,run:
+```
+python train.py
+```
+and
+```
+python test.py
+```
