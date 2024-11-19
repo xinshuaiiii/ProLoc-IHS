@@ -25,10 +25,10 @@ def download_image(protein_id, image_url, HPA,location, output_dir):
         return f"下载出错: {protein_id}, URL: {image_url}, 错误: {e}"
 
 # 加载数据
-data = pd.read_csv('../GmPLoc/all_data_final.csv')
+data = pd.read_csv('test_img_URL.csv')
 
 # 创建保存图像的主目录
-output_dir = '../GmPLoc/all_img'
+output_dir = '../test_img'
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
