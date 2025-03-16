@@ -82,8 +82,8 @@ if __name__ == '__main__':
     attention_masks = attention_masks[:num_samples]
     img_features = img_features[:num_samples]
 
-    pos_weight = torch.tensor(np.sum(labels.numpy() == 0, axis=0) / np.sum(labels.numpy() == 1, axis=0), dtype=torch.float32).to(device)
-    print(f"类别不平衡权重：{pos_weight}")
+    # pos_weight = torch.tensor(np.sum(labels.numpy() == 0, axis=0) / np.sum(labels.numpy() == 1, axis=0), dtype=torch.float32).to(device)
+    # print(f"类别不平衡权重：{pos_weight}")
 
     # 将 NumPy 数组转换为 PyTorch 张量
     seq_features = torch.tensor(seq_features, dtype=torch.float32)
