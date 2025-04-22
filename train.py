@@ -7,6 +7,13 @@ import pandas as pd
 import numpy as np
 from tqdm import tqdm
 from model import CrossAttentionModel
+from prott5 import ProteinEmbeddingExtractor
+from vit import ViTFeatureExtractorModel
+
+extractor_seq = ProteinEmbeddingExtractor()
+extractor_seq.process_file("train_name_URL.csv","seq_train_embeddings.npy","seq_train_attention_masks.npy")
+extractor_img = ViTFeatureExtractorModel()
+extractor_img.extract_features_for_all( "train"  ,"train_vitembeddings.npy")
 
 class FocalLoss(nn.Module):
     def __init__(self, alpha=1, gamma=2, reduction='mean'):
