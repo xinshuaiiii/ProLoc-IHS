@@ -1,7 +1,5 @@
 # ProLoc-IHS
-We propose a novel IHC image protein SCL prediction model **ProLoc-IHS** that combines sequence features. First, a bimodal dataset containing IHC images and protein sequences from the Human Protein Atlas (HPA) and UniProt is compiled. Then, ProLoc-IHS extracts embeddings from IHC images and protein sequences using the visual language model Vision Transformer (ViT) and the protein language model ProtT5, respectively. These embeddings are fused using a cross-attention module, and the fused features are input into the feature learning module of ProLoc-IHS, which contains a multi-head attention mechanism, a feedforward neural network, and a residual connection.
-
-Finally, the binary cross entropy (BCE) and the Focal loss function are introduced into the feature learning module to solve the multi-label classification task. Experimental results show that ProLoc-IHS outperforms other prediction models.
+ProLoc-IHS is an advanced deep learning model designed to accurately predict the subcellular localization (SCL) of proteins using immunohistochemistry (IHC) images and protein sequences. By combining image features from the Human Protein Atlas and sequence features from UniProt, ProLoc-IHS uses a cross-attention mechanism to capture the complex relationship between protein images and sequence information. It can provide highly accurate multi-label predictions for protein subcellular localization and significantly outperform existing methods.
 
 ---
 # How to use
