@@ -3,7 +3,7 @@ ProLoc-IHS is an advanced deep learning model designed to accurately predict the
 
 ---
 # How to use
-## Creating a Virtual Environment
+## Create a Virtual Environment
 This section describes how to use the trained ProLoc-IHS model to make subcellular localization predictions using a CSV file of sequences and a folder of IHC images.
 To run the code, we need to create a virtual environment using Anaconda, and install the required dependencies.The command is as follows：
 ```
@@ -12,13 +12,13 @@ conda create -n ProLoc-IHS pyhton=3.7.13
 conda activate ProLoc-IHS
 pip install -r requirements.txt
 ```
-
+## Download dataset
 To download images, run:
 ```
 cd dataset
 python download.py
 ```
-
+## Predict
 Case 1: If you have a complete test set and labels to evaluate the indicators
 ```
 python test_directly.py \
