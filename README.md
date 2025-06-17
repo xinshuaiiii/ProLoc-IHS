@@ -4,59 +4,36 @@ ProLoc-IHS is an advanced deep learning model designed to accurately predict the
 ---
 # How to use
 ## Creating a Virtual Environment
+This section describes how to use the trained ProLoc-IHS model to make subcellular localization predictions using a CSV file of sequences and a folder of IHC images.
 To run the code, we need to create a virtual environment using Anaconda, and install the required dependencies.The command is as follows：
 ```
+git clone https://github.com/xinshuaiiii/ProLoc-IHS.git
 conda create -n ProLoc-IHS pyhton=3.7.13
 conda activate ProLoc-IHS
 pip install -r requirements.txt
 ```
 
-## Dataset Preparation
-
-In the `dataset/` folder, there are four CSV files:
-
-- **`train.csv`** and **`test.csv`**: Contain labels, sequences, and metadata for training and testing.
-- **`train_img_URL.csv`** and **`test_img_URL.csv`**: Contain image URLs used to download IHC images.
-
-To download images, run:
-```bash
-python download.py
-```
-
-## Train
-The feature extraction process is integrated into the code—no need for additional preprocessing. Run:
-```
-python train.py
-```
----
-In addition to retraining, we also provide pre-trained weights for direct prediction.
-
-# How to use
-This section describes how to use the trained ProLoc-IHS model to make subcellular localization predictions using a CSV file of sequences and a folder of IHC images.
-
-Predict and Evaluate (with Ground Truth Labels)：
+Case 1: If you have a complete test set and labels to evaluate the indicators
 ```
 python test_directly.py \
   --seq_csv test_name_URL.csv \
   --img_folder test \
   --label_csv dataset/test.csv \
-  --model_path best_model.pth
 ```
 This will extract features, run inference, and compute evaluation metrics.
 
 
-Predict Only (No Ground Truth):
+Case 2: If you just want to predict the location
 ```
 python test_directly.py \
   --seq_csv test_name_URL.csv \
   --img_folder test \
-  --label_csv "" \
-  --model_path best_model.pth
 ```
 This will skip metric computation and only output the predicted results.
 
 # Citation
 If you use this work in your research, please cite the following paper:
+If you have any questions, please contact Yun Liu(liuyun313@jlu.edu.cn) or Shuai Xin(xinshuai23@mails.jlu.edu.cn)
 
 <pre>
 @article{liu2025proloc,
