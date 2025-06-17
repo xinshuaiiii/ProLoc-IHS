@@ -13,6 +13,10 @@ conda activate ProLoc-IHS
 pip install -r requirements.txt
 ```
 
+To download images, run:
+```bash
+python download.py
+```
 Case 1: If you have a complete test set and labels to evaluate the indicators
 ```
 python test_directly.py \
