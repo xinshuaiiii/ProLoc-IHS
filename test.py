@@ -7,6 +7,10 @@ from model1 import CrossAttentionModel  # 引入模型类
 from tqdm import tqdm  # 导入 tqdm 用于显示进度条
 import pandas as pd
 
+extractor_seq = ProteinEmbeddingExtractor()
+extractor_seq.process_file("test_name_URL.csv","seq_test_embeddings.npy","seq_test_attention_masks.npy")
+extractor_img = ViTFeatureExtractorModel()
+extractor_img.extract_features_for_all( "test"  ,"test_vitembeddings.npy")
 
 # 定义一个自定义数据集
 class CustomDataset(Dataset):
