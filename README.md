@@ -1,10 +1,10 @@
-
-
-**ProLoc-IHS** is a multi-label protein subcellular localization model that integrates immunohistochemical (IHC) images and protein sequence information. It is designed to address the challenge of predicting proteins that localize to multiple subcellular compartments, especially when image and sequence modalities provide heterogeneous but complementary cues.
+# ProLoc-IH
+This model is a multi-label protein subcellular localization model that integrates immunohistochemical (IHC) images and protein sequence information. It is designed to address the challenge of predicting proteins that localize to multiple subcellular compartments, especially when image and sequence modalities provide heterogeneous but complementary cues.
 
 The model employs a cross-attention mechanism to map semantic relationships between modalities and enhances discriminative learning through a fusion framework. This enables accurate localization prediction across complex spatial distributions.
 
 ---
+## How to use
 # Creating a Virtual Environment
 To run the code, we need to create a virtual environment using Anaconda, and install the required dependencies.The command is as follows：
 ```
