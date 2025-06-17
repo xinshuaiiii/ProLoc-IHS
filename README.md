@@ -47,7 +47,7 @@ This will extract features, run inference, and compute evaluation metrics.
 
 Predict Only (No Ground Truth):
 ```
-python predict.py \
+python test_directly.py \
   --seq_csv test_name_URL.csv \
   --img_folder test \
   --label_csv "" \
