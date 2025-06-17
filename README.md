@@ -2,7 +2,7 @@
 ProLoc-IHS is an advanced deep learning model designed to accurately predict the subcellular localization (SCL) of proteins using immunohistochemistry (IHC) images and protein sequences. By combining image features from the Human Protein Atlas and sequence features from UniProt, ProLoc-IHS uses a cross-attention mechanism to capture the complex relationship between protein images and sequence information. It can provide highly accurate multi-label predictions for protein subcellular localization and significantly outperform existing methods.
 
 ---
-# How to use
+# How to train from scratch
 ## Creating a Virtual Environment
 To run the code, we need to create a virtual environment using Anaconda, and install the required dependencies.The command is as follows：
 ```
@@ -23,16 +23,17 @@ To download images, run:
 python download.py
 ```
 
-## Train and test
-We provide both training and testing scripts. If you’d like to train the model from scratch, simply run:
+## Train
+The feature extraction process is integrated into the code—no need for additional preprocessing. Run:
 ```
 python train.py
 ```
-If you prefer to use the pretrained features and skip training, you can directly run:
-```
-python test.py
-```
-The feature extraction process is integrated into the code—no need for additional preprocessing.
+
+In addition to retraining, we also provide pre-trained weights for direct prediction.
+# How to use
+
+
+
 
 # Citation
 If you use this work in your research, please cite the following paper:
