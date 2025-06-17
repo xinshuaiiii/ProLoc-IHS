@@ -28,8 +28,9 @@ The feature extraction process is integrated into the code—no need for additio
 ```
 python train.py
 ```
-
+---
 In addition to retraining, we also provide pre-trained weights for direct prediction.
+
 # How to use
 This section describes how to use the trained ProLoc-IHS model to make subcellular localization predictions using a CSV file of sequences and a folder of IHC images.
 
