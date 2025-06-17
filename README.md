@@ -23,9 +23,9 @@ In the `dataset/` folder, there are four CSV files:
 To download images, run:
 ```bash
 python download.py
+```
 
-
-# Train and test
+## Train and test
 After preparing the features and training files,run:
 ```
 python train.py
@@ -34,3 +34,5 @@ and
 ```
 python test.py
 ```
+
+
