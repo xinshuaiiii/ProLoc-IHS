@@ -14,7 +14,7 @@ pip install -r requirements.txt
 ```
 
 To download images, run:
-```bash
+```
 cd dataset
 python download.py
 ```
