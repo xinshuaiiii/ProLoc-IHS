@@ -1,7 +1,7 @@
 # ProLoc-IHS
-We proposes a novel IHC image protein SCL prediction model ProLoc-IHS that combines sequence features. First, a bimodal dataset containing IHC images and protein sequences from the Human Protein Atlas (HPA) and UniProt is compiled. Then, ProLoc-IHS extracts embeddings from IHC images and protein sequences using the visual language model Vision Transformer (Vit) and the protein language model ProtT5, respectively. Subsequently, these embeddings are fused using a cross-attention module, and the fused features are input into the feature learning module of ProLoc-IHS, which contains a multi-head attention mechanism, a feedforward neural network, and a residual connection. 
+  We proposes a novel IHC image protein SCL prediction model ProLoc-IHS that combines sequence features. First, a bimodal dataset containing IHC images and protein sequences from the Human Protein Atlas (HPA) and UniProt is compiled. Then, ProLoc-IHS extracts embeddings from IHC images and protein sequences using the visual language model Vision Transformer (Vit) and the protein language model ProtT5, respectively. Subsequently, these embeddings are fused using a cross-attention module, and the fused features are input into the feature learning module of ProLoc-IHS, which contains a multi-head attention mechanism, a feedforward neural network, and a residual connection. 
 
-Finally, the binary cross entropy (BCE) and the Focal loss function are introduced into the feature learning module to solve the multi-label classification task. Experimental results show that ProLoc-IHS outperforms other prediction models.
+  Finally, the binary cross entropy (BCE) and the Focal loss function are introduced into the feature learning module to solve the multi-label classification task. Experimental results show that ProLoc-IHS outperforms other prediction models.
 
 ---
 # How to use
