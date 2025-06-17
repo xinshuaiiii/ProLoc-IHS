@@ -38,11 +38,15 @@ python test.py
 # Citation
 If you use this work in your research, please cite the following paper:
 
+<pre>
+```bibtex
 @article{liu2025proloc,
   title={ProLoc-IHS: Multi-label protein subcellular localization based on immunohistochemical images and sequence information},
   author={Liu, Fu and Xin, Shuai and Liu, Yun},
   journal={International Journal of Biological Macromolecules},
   pages={144096},
-  year={2025},
-  publisher={Elsevier}
+  year={2025}
 }
+```
+</pre>
+
