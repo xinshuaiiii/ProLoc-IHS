@@ -31,8 +31,25 @@ python train.py
 
 In addition to retraining, we also provide pre-trained weights for direct prediction.
 # How to use
+This section describes how to use the trained ProLoc-IHS model to make subcellular localization predictions using a CSV file of sequences and a folder of IHC images.
 
+Predict and Evaluate (with Ground Truth Labels)：
+```
+python test_directly.py \
+  --seq_csv test_name_URL.csv \
+  --img_folder test \
+  --label_csv dataset/test.csv \
+  --model_path best_model.pth
+```
 
+Predict Only (No Ground Truth):
+```
+python predict.py \
+  --seq_csv test_name_URL.csv \
+  --img_folder test \
+  --label_csv "" \
+  --model_path best_model.pth
+```
 
 
 # Citation
