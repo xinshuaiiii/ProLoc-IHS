@@ -26,7 +26,7 @@ python download.py
 ```
 
 ## Train and test
-After preparing the features and training files,run:
+Once the dataset files are prepared, you can directly run the following command to train and generate subcellular localization predictions. The code automatically handles feature extraction internally, so no additional preprocessing is required:
 ```
 python train.py
 ```
@@ -35,4 +35,14 @@ and
 python test.py
 ```
 
+# Citation
+If you use this work in your research, please cite the following paper:
 
+@article{liu2025proloc,
+  title={ProLoc-IHS: Multi-label protein subcellular localization based on immunohistochemical images and sequence information},
+  author={Liu, Fu and Xin, Shuai and Liu, Yun},
+  journal={International Journal of Biological Macromolecules},
+  pages={144096},
+  year={2025},
+  publisher={Elsevier}
+}
