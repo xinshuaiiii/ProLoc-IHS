@@ -26,14 +26,15 @@ python download.py
 ```
 
 ## Train and test
-Once the dataset files are prepared, you can directly run the following command to train and generate subcellular localization predictions. The code automatically handles feature extraction internally, so no additional preprocessing is required:
+We provide both training and testing scripts. If you’d like to train the model from scratch, simply run:
 ```
 python train.py
 ```
-and
+If you prefer to use the pretrained features and skip training, you can directly run:
 ```
 python test.py
 ```
+The feature extraction process is integrated into the code—no need for additional preprocessing.
 
 # Citation
 If you use this work in your research, please cite the following paper:
