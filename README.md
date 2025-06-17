@@ -1,7 +1,7 @@
 # ProLoc-IHS
-This model is a multi-label protein subcellular localization model that integrates immunohistochemical (IHC) images and protein sequence information. It is designed to address the challenge of predicting proteins that localize to multiple subcellular compartments, especially when image and sequence modalities provide heterogeneous but complementary cues.
+We proposes a novel IHC image protein SCL prediction model ProLoc-IHS that combines sequence features. First, a bimodal dataset containing IHC images and protein sequences from the Human Protein Atlas (HPA) and UniProt is compiled. Then, ProLoc-IHS extracts embeddings from IHC images and protein sequences using the visual language model Vision Transformer (Vit) and the protein language model ProtT5, respectively. Subsequently, these embeddings are fused using a cross-attention module, and the fused features are input into the feature learning module of ProLoc-IHS, which contains a multi-head attention mechanism, a feedforward neural network, and a residual connection. 
 
-The model employs a cross-attention mechanism to map semantic relationships between modalities and enhances discriminative learning through a fusion framework. This enables accurate localization prediction across complex spatial distributions.
+Finally, the binary cross entropy (BCE) and the Focal loss function are introduced into the feature learning module to solve the multi-label classification task. Experimental results show that ProLoc-IHS outperforms other prediction models.
 
 ---
 # How to use
