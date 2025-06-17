@@ -38,8 +38,7 @@ python test_directly.py \
 This will skip metric computation and only output the predicted results.
 
 # Citation
-If you use this work in your research, please cite the following paper:
-If you have any questions, please contact Yun Liu(liuyun313@jlu.edu.cn) or Shuai Xin(xinshuai23@mails.jlu.edu.cn)
+If you use this work in your research, please cite the following paper.
 
 <pre>
 @article{liu2025proloc,
@@ -50,4 +49,7 @@ If you have any questions, please contact Yun Liu(liuyun313@jlu.edu.cn) or Shuai
   year={2025}
 }
 </pre>
+
+
+If you have any questions, please contact Yun Liu(liuyun313@jlu.edu.cn) or Shuai Xin(xinshuai23@mails.jlu.edu.cn)
 
