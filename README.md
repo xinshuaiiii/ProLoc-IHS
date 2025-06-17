@@ -41,6 +41,8 @@ python test_directly.py \
   --label_csv dataset/test.csv \
   --model_path best_model.pth
 ```
+This will extract features, run inference, and compute evaluation metrics.
+
 
 Predict Only (No Ground Truth):
 ```
@@ -50,7 +52,7 @@ python predict.py \
   --label_csv "" \
   --model_path best_model.pth
 ```
-
+This will skip metric computation and only output the predicted results.
 
 # Citation
 If you use this work in your research, please cite the following paper:
