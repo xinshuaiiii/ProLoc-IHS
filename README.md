@@ -32,7 +32,7 @@ python test_directly.py \
   --img_folder ihcFolder \
   --pred_output predictions.csv
 ```
-This will generate the prediction results in `predictions.csv `.
+This will generate the prediction results in `predictions.csv`.
 
 
 # Citation
