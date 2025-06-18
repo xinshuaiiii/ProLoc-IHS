@@ -13,8 +13,9 @@ conda activate ProLoc-IHS
 pip install -r requirements.txt
 ```
 ## Download pretrained model 
-We use pre-trained prott5 and vit, so you need to download the model and put it in the same directory as `train.py`.
-prott5: url{https://github.com/agemagician/ProtTrans}   model:ProtT5-XL-UniRef50 (also ProtT5-XL-U50)
+We use pre-trained Prott5 and vit, so you need to download the model and put it in the same directory as `train.py`.
+
+Prott5: {https://github.com/agemagician/ProtTrans}   model:ProtT5-XL-UniRef50 (also ProtT5-XL-U50)
 
 
 ## Prepare your data
