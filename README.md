@@ -12,6 +12,11 @@ conda create -n ProLoc-IHS pyhton=3.7.13
 conda activate ProLoc-IHS
 pip install -r requirements.txt
 ```
+## Download pretrained model 
+We use pre-trained prott5 and vit, so you need to download the model and put it in the same directory as `train.py`.
+prott5: url{https://github.com/agemagician/ProtTrans}   model:ProtT5-XL-UniRef50 (also ProtT5-XL-U50)
+
+
 ## Prepare your data
 Proteins IHC images and sequences are necessary to perform ProLoc-IHS. IHC images should be of `.jpg` format, and sequences should be of `.csv` format. You can refer to the format in `dataset/test.csv` as an example.
 
@@ -22,8 +27,9 @@ Attention: your IHC images and sequences should be in same order, or your will g
 python test_directly.py \
   --seq_csv sequence.csv \
   --img_folder ihcFolder \
+  --pred_output predictions.csv
 ```
-This will generate the prediction results in xxx.file, in which xxx.
+This will generate the prediction results in predictions.csv.
 
 
 # Citation
