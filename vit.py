@@ -7,7 +7,7 @@ import numpy as np
 
 
 class ViTFeatureExtractorModel:
-    def __init__(self, model_name='../vit-base-patch16-224-in21k'):
+    def __init__(self, model_name='google/vit-base-patch16-224-in21k'):
         """
         初始化ViT模型和特征提取器
         :param model_name: Hugging Face transformers中的模型名称
