@@ -142,8 +142,9 @@ def main(args):
     preds = test_model(model, loader, device, has_labels, thresholds)
 
     if not has_labels:
-        np.save(args.pred_output, preds)
-        print(f"Predictions saved to {args.pred_output}")
+        pred_df = pd.DataFrame(preds, columns=[f"Label_{i+1}" for i in range(preds.shape[1])])
+        pred_df.to_csv(args.pred_output, index=False)
+        print(f"Predictions saved to CSV: {args.pred_output}")
 
 
 if __name__ == "__main__":
