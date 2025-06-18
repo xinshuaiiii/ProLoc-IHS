@@ -3,8 +3,8 @@ ProLoc-IHS is an advanced deep learning model designed to accurately predict the
 
 ---
 # How to use
-## Create a Virtual Environment
 This section describes how to use the trained ProLoc-IHS model to make subcellular localization predictions using a CSV file of sequences and a folder of IHC images.
+## Create a Virtual Environment
 To run the code, we need to create a virtual environment using Anaconda, and install the required dependencies. The command is as follows：
 ```
 git clone https://github.com/xinshuaiiii/ProLoc-IHS.git
@@ -12,30 +12,19 @@ conda create -n ProLoc-IHS pyhton=3.7.13
 conda activate ProLoc-IHS
 pip install -r requirements.txt
 ```
-## Download dataset
-To download images, run:
-```
-cd dataset
-python download.py
-```
+## Prepare your data
+Proteins IHC images and sequences are necessary to perform ProLoc-IHS. IHC images should be of what format, and sequences should be of what format.
+
+Attention: your IHC images and sequences should be in same order, or your will get wrong results.
+
 ## Predict
-Case 1: If you have a complete test set and labels to evaluate the indicators
 ```
 python test_directly.py \
-  --seq_csv test_name_URL.csv \
-  --img_folder test \
-  --label_csv dataset/test.csv \
+  --seq_csv sequence.csv \
+  --img_folder ihcFolder \
 ```
-This will extract features, run inference, and compute evaluation metrics.
+This will generate the prediction results in xxx.file, in which xxx.
 
-
-Case 2: If you just want to predict the location
-```
-python test_directly.py \
-  --seq_csv test_name_URL.csv \
-  --img_folder test \
-```
-This will skip metric computation and only output the predicted results.
 
 # Citation
 If you use this work in your research, please cite the following paper.
