@@ -13,7 +13,7 @@ conda activate ProLoc-IHS
 pip install -r requirements.txt
 ```
 ## Prepare your data
-Proteins IHC images and sequences are necessary to perform ProLoc-IHS. IHC images should be of what format, and sequences should be of what format.
+Proteins IHC images and sequences are necessary to perform ProLoc-IHS. IHC images should be of `.jpg` format, and sequences should be of `.csv` format. You can refer to the format in `dataset/test.csv` as an example.
 
 Attention: your IHC images and sequences should be in same order, or your will get wrong results.
 
